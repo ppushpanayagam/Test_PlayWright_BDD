@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cucumber-js test"
   },
   "keywords": [],
   "author": "Pushparaj Pushpanayagam",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@playwright/test": "^1.41.2",
+    "ts-node": "^10.9.2"
+  }
 }
