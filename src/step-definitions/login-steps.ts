@@ -32,7 +32,7 @@ When(
 )
 
 When(
-    /^the user click login button$/,
+    /^the user click on the login button$/,
     async function() {
 
         await global.page.locator('input[type="submit"]').click();

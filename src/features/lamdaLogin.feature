@@ -1,12 +1,11 @@
-Feature: Verify user able to add a product to cart
+Feature: Verify Login Scenarios
 
-Background:
+Background: Successfully launch the application
     Given the user launch the applicaiton
     
-    @Dev
-    Scenario: Successfully view the user account details 
+    Scenario: Successfully verify added mobile device in the cart
         Given the user on the login page
         When the user enter valid username and password
-        And the user click login button
+        And the user click on the login button
         Then the user should be redirected to account page
         And the user should see all the required account details
