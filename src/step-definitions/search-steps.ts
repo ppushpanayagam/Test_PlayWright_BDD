@@ -54,26 +54,26 @@ When(
 )
 
 Then(
-    /^the user should see the selected mobile device in the cart$/,
-    async function() {
+    /^the user should see the selected "([^"]*)" in the cart$/,
+    async function(deviceName: string) {
 
         const {
             screen: {page},
         }=this;
 
-        await searchPage.clickCartIcon(page);
+        // await searchPage.clickCartIcon(page);
         await searchPage.clickCheckOutBtn(page);
-
+        await searchPage.verifyMobileDeviceName(page, deviceName);
     }
 )
 
 Then(
-    /^the user should see all the details of the mobile device$/,
-    async function() {
+    /^the user should see all the "([^"]*)" of the mobile device$/,
+    async function(price: string) {
 
         const {
             screen: {page},
         }=this;
-        await searchPage.clickCheckOutBtn(page);
+        await searchPage.verifyMobilePrice(page, price);
     }
 )

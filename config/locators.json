@@ -7,10 +7,13 @@
     "search_Btn": "//button[contains(text(), 'Search')]",
     "search_Field": "(//input[@name='search'])[1]",
     "myAccount_Url": "route=account/account",
-    "mobileDeviceToSelect": "mz-product-grid-image-28-212469",
+    "mobileDeviceToSelect": "div.product-layout:nth-child(1) > div",
     "add_CartBtn": "(//button[@title='Add to Cart'])[2]",
     "cart_Icon": "(//div[@class='icon svg-icon'])[17]",
-    "checkout_Btn": "div[data-id='217851']"
+    "checkout_Btn": "div[data-id='217851']",
+    "deviceName": "//div[@id='checkout-cart']/table/tbody/tr/td[2]/a",
+    "devicePrice": "//div[@id='checkout-cart']/table/tbody/tr/td[4]",
+    "checkOutBtn_Notification": "div.col:nth-child(2) > a"
     
     
 }

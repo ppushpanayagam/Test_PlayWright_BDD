@@ -78,5 +78,19 @@ export const clickCartIcon = async (
 export const clickCheckOutBtn = async (
     page: Page,
 ): Promise<void> => {
-    await clickElement(page, locator.checkout_Btn)
+    await clickElement(page, locator.checkOutBtn_Notification)
+};
+
+export const verifyMobileDeviceName = async (
+    page: Page,
+    value: string
+): Promise<void> => {
+    expect(await page.locator(locator.deviceName)).toContainText(value);
+};
+
+export const verifyMobilePrice = async (
+    page: Page,
+    value: string
+): Promise<void> => {
+    expect(await page.locator(locator.devicePrice)).toContainText(value);
 };

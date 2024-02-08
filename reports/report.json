@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1674414292
+              "duration": 2335887958
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3009162375
+              "duration": 3332487667
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 182911749
+              "duration": 40066709
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1510668583
+              "duration": 1105174583
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 486264165
+              "duration": 502474582
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1429666
+              "duration": 726125
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 728827624
+              "duration": 690366832
             }
           },
           {
@@ -105,7 +105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 435207
+              "duration": 687154958
             }
           },
           {
@@ -114,45 +114,46 @@
             "line": 14,
             "name": "the user add the mobile device to the cart",
             "match": {
-              "location": "src/step-definitions/search-steps.ts:40"
+              "location": "src/step-definitions/search-steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 236083
+              "duration": 363234874
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 15,
-            "name": "the user should see the selected mobile device in the cart",
+            "name": "the user should see the selected \"HTC Touch HD\" in the cart",
             "match": {
-              "location": "src/step-definitions/search-steps.ts:48"
+              "location": "src/step-definitions/search-steps.ts:56"
             },
             "result": {
               "status": "passed",
-              "duration": 228457
+              "duration": 577876917
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
-            "name": "the user should see all the details of the mobile device",
+            "name": "the user should see all the \"146\" of the mobile device",
             "match": {
-              "location": "src/step-definitions/search-steps.ts:56"
+              "location": "src/step-definitions/search-steps.ts:70"
             },
             "result": {
               "status": "passed",
-              "duration": 215375
+              "duration": 1793917
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 246512000
+              "status": "failed",
+              "duration": 60918042,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'checkout-cart\\']/table/tbody/tr/td[2]/a')\nExpected string: \u001b[32m\"HTC Touch HD\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n  \u001b[2m- locator._expect with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'checkout-cart\\']/table/tbody/tr/td[2]/a')\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Personal/AssignmentTest/Test_PlayWright_BDD/node_modules/playwright/lib/matchers/expect.js:174:37)\n    at /Volumes/Personal/AssignmentTest/Test_PlayWright_BDD/src/pages/searchPage.ts:88:52\n    at fulfilled (/Volumes/Personal/AssignmentTest/Test_PlayWright_BDD/src/pages/searchPage.ts:28:58)\n    at runNextTicks (node:internal/process/task_queues:60:5)\n    at processImmediate (node:internal/timers:442:9)"
             }
           }
         ],

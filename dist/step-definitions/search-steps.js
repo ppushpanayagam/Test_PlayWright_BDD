@@ -46,38 +46,71 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   };
 }());
 (0, _cucumber.Given)(/^the user select the required mobile device$/, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+  var page;
   return _regeneratorRuntime().wrap(function _callee3$(_context3) {
     while (1) switch (_context3.prev = _context3.next) {
       case 0:
+        page = this.screen.page;
+        _context3.next = 3;
+        return searchPage.clickMobileDevice(page);
+      case 3:
       case "end":
         return _context3.stop();
     }
-  }, _callee3);
+  }, _callee3, this);
 })));
 (0, _cucumber.When)(/^the user add the mobile device to the cart$/, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+  var page;
   return _regeneratorRuntime().wrap(function _callee4$(_context4) {
     while (1) switch (_context4.prev = _context4.next) {
       case 0:
+        page = this.screen.page;
+        _context4.next = 3;
+        return searchPage.clickAddToCartBtn(page);
+      case 3:
       case "end":
         return _context4.stop();
     }
-  }, _callee4);
+  }, _callee4, this);
 })));
-(0, _cucumber.Then)(/^the user should see the selected mobile device in the cart$/, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
-  return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-    while (1) switch (_context5.prev = _context5.next) {
-      case 0:
-      case "end":
-        return _context5.stop();
-    }
-  }, _callee5);
-})));
-(0, _cucumber.Then)(/^the user should see all the details of the mobile device$/, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
-  return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-    while (1) switch (_context6.prev = _context6.next) {
-      case 0:
-      case "end":
-        return _context6.stop();
-    }
-  }, _callee6);
-})));
+(0, _cucumber.Then)(/^the user should see the selected "([^"]*)" in the cart$/, /*#__PURE__*/function () {
+  var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(deviceName) {
+    var page;
+    return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+      while (1) switch (_context5.prev = _context5.next) {
+        case 0:
+          page = this.screen.page; // await searchPage.clickCartIcon(page);
+          _context5.next = 3;
+          return searchPage.clickCheckOutBtn(page);
+        case 3:
+          _context5.next = 5;
+          return searchPage.verifyMobileDeviceName(page, deviceName);
+        case 5:
+        case "end":
+          return _context5.stop();
+      }
+    }, _callee5, this);
+  }));
+  return function (_x2) {
+    return _ref5.apply(this, arguments);
+  };
+}());
+(0, _cucumber.Then)(/^the user should see all the "([^"]*)" of the mobile device$/, /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(price) {
+    var page;
+    return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+      while (1) switch (_context6.prev = _context6.next) {
+        case 0:
+          page = this.screen.page;
+          _context6.next = 3;
+          return searchPage.verifyMobilePrice(page, price);
+        case 3:
+        case "end":
+          return _context6.stop();
+      }
+    }, _callee6, this);
+  }));
+  return function (_x3) {
+    return _ref6.apply(this, arguments);
+  };
+}());

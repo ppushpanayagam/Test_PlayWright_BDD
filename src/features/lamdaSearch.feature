@@ -12,8 +12,8 @@ Background: Successfully log into the application
         And the user search for "<deviceDetails>" mobile device
         And the user select the required mobile device
         When the user add the mobile device to the cart
-        Then the user should see the selected mobile device in the cart
-        And the user should see all the details of the mobile device
+        Then the user should see the selected "<deviceDetails>" in the cart
+        And the user should see all the "<price>" of the mobile device
         Examples:
             | deviceDetails | price   |
             | HTC Touch HD  | 146     |
