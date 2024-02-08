@@ -3,5 +3,14 @@
     "email_field": "#input-email",
     "password_field": "#input-password",
     "submit_btn": "input[type='submit']",
-    "account_Header": "#content>div:nth-child(1)>h2"
+    "account_Header": "li.breadcrumb-item:nth-child(2)",
+    "search_Btn": "//button[contains(text(), 'Search')]",
+    "search_Field": "(//input[@name='search'])[1]",
+    "myAccount_Url": "route=account/account",
+    "mobileDeviceToSelect": "mz-product-grid-image-28-212469",
+    "add_CartBtn": "(//button[@title='Add to Cart'])[2]",
+    "cart_Icon": "(//div[@class='icon svg-icon'])[17]",
+    "checkout_Btn": "div[data-id='217851']"
+    
+    
 }

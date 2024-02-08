@@ -13,6 +13,5 @@ const dev = `${common} --tags '@dev'`;
 const smoke = `${common} --tags '@smoke'`;
 const regression = `${common} --tags '@regression'`;
 
-console.log('\n🥒 ✨ 🥒 ✨ 🥒 ✨ 🥒 ✨ 🥒 ✨ 🥒 ✨ 🥒 ✨ 🥒 \n');
 
 export { dev, smoke, regression };

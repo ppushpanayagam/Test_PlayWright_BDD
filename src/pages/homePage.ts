@@ -26,10 +26,10 @@ export const enterEmailId = async (
     page: Page,
     emailId: string,
 ): Promise<void> => {
-   await mailId(page, locator.email_field, emailId)
+   await enterForTextField(page, locator.email_field, emailId)
 };
 
-async function mailId(page: Page, locator:string, value:string) {
+async function enterForTextField(page: Page, locator:string, value:string) {
     
     await page.locator(locator).fill(value);
 }
@@ -38,13 +38,8 @@ export const enterPassword = async (
     page: Page,
     pass: string,
 ): Promise<void> => {
-   await password(page, locator.password_field, pass)
+   await enterForTextField(page, locator.password_field, pass)
 };
-
-async function password(page: Page, locator:string, value:string) {
-    
-    await page.locator(locator).fill(value);
-}
 
 export const clickSignInBtn = async (
     page: Page,

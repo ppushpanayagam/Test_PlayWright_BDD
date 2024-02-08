@@ -13,18 +13,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          console.log("\uD83E\uDD52 Running cucumber \"".concat(scenario.pickle.name, "\""));
           contextOptions = {
             recordVideo: {
               dir: "".concat((0, _parseEnv.env)('VIDEO_PATH')).concat(scenario.pickle.name)
             }
           };
-          _context.next = 4;
+          _context.next = 3;
           return this.init(contextOptions);
-        case 4:
+        case 3:
           ready = _context.sent;
           return _context.abrupt("return", ready);
-        case 6:
+        case 5:
         case "end":
           return _context.stop();
       }

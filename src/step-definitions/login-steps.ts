@@ -2,7 +2,7 @@ import { Given, Then, When } from '@cucumber/cucumber'
 import {expect} from'@playwright/test'
 import * as data from '../../config/testdata.json'
 import * as homePage from '../pages/homePage';
-
+import * as searchPage from '../pages/searchPage';
 
 Given(
     /^the user launch the applicaiton$/,
@@ -62,8 +62,7 @@ Then(
             screen: {page},
         } = this;
 
-        const actual = await page.locator('#content>div:nth-child(1)>h2').textContent();
-        expect(actual).toBe(data.account_Header);
+        await searchPage.verifyMyAccountPageHeader(page, data.account_Header);
     }
 )
 

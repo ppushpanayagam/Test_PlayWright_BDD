@@ -5,8 +5,7 @@ import { ScenarioWorld } from './world';
 setDefaultTimeout(50000);
 
 Before(async function (this: ScenarioWorld, scenario: ITestCaseHookParameter) {
-    console.log(`🥒 Running cucumber "${scenario.pickle.name}"`);
-
+    
     const contextOptions = {
         recordVideo: {
             dir: `${env('VIDEO_PATH')}${scenario.pickle.name}`,

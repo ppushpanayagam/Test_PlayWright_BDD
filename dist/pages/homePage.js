@@ -74,7 +74,7 @@ var enterEmailId = exports.enterEmailId = /*#__PURE__*/function () {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
           _context3.next = 2;
-          return mailId(page, locator.email_field, emailId);
+          return enterForTextField(page, locator.email_field, emailId);
         case 2:
         case "end":
           return _context3.stop();
@@ -85,11 +85,11 @@ var enterEmailId = exports.enterEmailId = /*#__PURE__*/function () {
     return _ref3.apply(this, arguments);
   };
 }();
-function mailId(_x9, _x10, _x11) {
-  return _mailId.apply(this, arguments);
+function enterForTextField(_x9, _x10, _x11) {
+  return _enterForTextField.apply(this, arguments);
 }
-function _mailId() {
-  _mailId = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(page, locator, value) {
+function _enterForTextField() {
+  _enterForTextField = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(page, locator, value) {
     return _regeneratorRuntime().wrap(function _callee8$(_context8) {
       while (1) switch (_context8.prev = _context8.next) {
         case 0:
@@ -101,7 +101,7 @@ function _mailId() {
       }
     }, _callee8);
   }));
-  return _mailId.apply(this, arguments);
+  return _enterForTextField.apply(this, arguments);
 }
 var enterPassword = exports.enterPassword = /*#__PURE__*/function () {
   var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(page, pass) {
@@ -109,7 +109,7 @@ var enterPassword = exports.enterPassword = /*#__PURE__*/function () {
       while (1) switch (_context4.prev = _context4.next) {
         case 0:
           _context4.next = 2;
-          return password(page, locator.password_field, pass);
+          return enterForTextField(page, locator.password_field, pass);
         case 2:
         case "end":
           return _context4.stop();
@@ -120,24 +120,6 @@ var enterPassword = exports.enterPassword = /*#__PURE__*/function () {
     return _ref4.apply(this, arguments);
   };
 }();
-function password(_x14, _x15, _x16) {
-  return _password.apply(this, arguments);
-}
-function _password() {
-  _password = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(page, locator, value) {
-    return _regeneratorRuntime().wrap(function _callee9$(_context9) {
-      while (1) switch (_context9.prev = _context9.next) {
-        case 0:
-          _context9.next = 2;
-          return page.locator(locator).fill(value);
-        case 2:
-        case "end":
-          return _context9.stop();
-      }
-    }, _callee9);
-  }));
-  return _password.apply(this, arguments);
-}
 var clickSignInBtn = exports.clickSignInBtn = /*#__PURE__*/function () {
   var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(page) {
     return _regeneratorRuntime().wrap(function _callee5$(_context5) {
@@ -151,7 +133,7 @@ var clickSignInBtn = exports.clickSignInBtn = /*#__PURE__*/function () {
       }
     }, _callee5);
   }));
-  return function clickSignInBtn(_x17) {
+  return function clickSignInBtn(_x14) {
     return _ref5.apply(this, arguments);
   };
 }();
@@ -168,25 +150,25 @@ var clickSubmitBtn = exports.clickSubmitBtn = /*#__PURE__*/function () {
       }
     }, _callee6);
   }));
-  return function clickSubmitBtn(_x18) {
+  return function clickSubmitBtn(_x15) {
     return _ref6.apply(this, arguments);
   };
 }();
-function clickBtn(_x19, _x20) {
+function clickBtn(_x16, _x17) {
   return _clickBtn.apply(this, arguments);
 }
 function _clickBtn() {
-  _clickBtn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10(page, locator) {
-    return _regeneratorRuntime().wrap(function _callee10$(_context10) {
-      while (1) switch (_context10.prev = _context10.next) {
+  _clickBtn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(page, locator) {
+    return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+      while (1) switch (_context9.prev = _context9.next) {
         case 0:
-          _context10.next = 2;
+          _context9.next = 2;
           return page.locator(locator).click();
         case 2:
         case "end":
-          return _context10.stop();
+          return _context9.stop();
       }
-    }, _callee10);
+    }, _callee9);
   }));
   return _clickBtn.apply(this, arguments);
 }

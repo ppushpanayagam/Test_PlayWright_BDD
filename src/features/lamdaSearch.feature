@@ -7,10 +7,13 @@ Background: Successfully log into the application
     And the user click on the login button
     
     @dev
-    Scenario: Successfully add a mobile to cart 
+    Scenario Outline: Successfully add a mobile to cart 
         Given the user on the my account page
-        And the user search for "HTC Touch HD" mobile device
+        And the user search for "<deviceDetails>" mobile device
         And the user select the required mobile device
         When the user add the mobile device to the cart
         Then the user should see the selected mobile device in the cart
         And the user should see all the details of the mobile device
+        Examples:
+            | deviceDetails | price   |
+            | HTC Touch HD  | 146     |
