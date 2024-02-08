@@ -1,6 +1,7 @@
 import { Given, Then, When } from '@cucumber/cucumber'
 import {expect} from'@playwright/test'
 import * as data from '../../config/testdata.json'
+import * as homePage from '../pages/homePage';
 
 
 Given(
@@ -11,7 +12,7 @@ Given(
             screen: {page},
         } = this;
 
-        await page.goto(data.baseUrl)
+        await homePage.navigateToSonyApplication(page, data.baseUrl)
     }
 )
 
@@ -23,7 +24,7 @@ Given(
             screen: {page},
         } = this;
 
-        expect(await page.title()).toBe(data.lamdaApp_Title);
+        await homePage.verifyLoginPage(page, data.lamdaApp_Title);
     }
 )
 
@@ -35,9 +36,9 @@ When(
             screen: {page},
         } = this;
 
-        await page.locator('li.dropdown:nth-child(6) > a').click();
-        await page.locator('#input-email').fill(data.email_Id);
-        await page.locator('#input-password').fill(data.password);   
+        await homePage.clickSignInBtn(page);
+        await homePage.enterEmailId(page, data.email_Id)
+        await homePage.enterPassword(page, data.password);   
     }
 )
 
@@ -49,7 +50,7 @@ When(
             screen: {page},
         } = this;
 
-        await page.locator('input[type="submit"]').click();
+        await homePage.clickSubmitBtn(page);
     }
 )
 
@@ -73,7 +74,7 @@ Then(
         const {
             screen: {page},
         } = this;
-        
+
         expect(await page.url()).toContain(data.accountPageUrl);
     }
 )
