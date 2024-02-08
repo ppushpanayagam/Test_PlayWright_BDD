@@ -6,7 +6,11 @@ Given(
     /^the user on the my account page$/,
     async function() {
 
-        const actual = await global.page.locator('#content>div:nth-child(1)>h2').textContent();
+        const {
+            screen: {page},
+        } = this;
+
+        const actual = await page.locator('#content>div:nth-child(1)>h2').textContent();
         expect(actual).toBe("My Account");
     }
 )
@@ -15,8 +19,12 @@ Given(
     /^the user search for "([^"]*)" mobile device$/,
     async function(mobileDevice: string) {
 
-        await global.page.locator('').fill(mobileDevice);
-        await global.page.locator('').click();  
+        const {
+            screen: {page},
+        } = this;
+
+        await page.locator('').fill(mobileDevice);
+        await page.locator('').click();  
     }
 )
 

@@ -4,14 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cucumber" : "cucumber-js src/features/**/*.feature --tags @Dev --require-module ts-node/register --require src/step-definitions/**/**/*.ts"
+    "transpile": "rimraf dist && babel --extensions .ts --out-dir dist src",
+    "precucumber": "rimraf reports && mkdir reports && echo {} > reports/report.json",
+    "cucumber": "npm run transpile && cucumber-js",
+    "postcucumber": "ts-node ./src/reporter/cucumber-report.ts"
   },
   "keywords": [],
   "author": "Pushparaj Pushpanayagam",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-typescript": "^7.23.3",
     "@cucumber/cucumber": "^10.3.1",
     "@playwright/test": "^1.41.2",
+    "cucumber-html-reporter": "^7.1.1",
+    "dotenv": "^16.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }

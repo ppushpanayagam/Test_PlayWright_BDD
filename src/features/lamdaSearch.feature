@@ -6,7 +6,7 @@ Background: Successfully log into the application
     When the user enter valid username and password
     And the user click on the login button
     
-    @Dev
+    @dev
     Scenario: Successfully add a mobile to cart 
         Given the user on the my account page
         And the user search for "HTC Touch HD" mobile device
