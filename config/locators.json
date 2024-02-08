@@ -1,0 +1,7 @@
+{
+    "signIn_Btn": "li.dropdown:nth-child(6) > a",
+    "email_field": "#input-email",
+    "password_field": "#input-password",
+    "submit_btn": "input[type='submit']",
+    "account_Header": "#content>div:nth-child(1)>h2"
+}

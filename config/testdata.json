@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://ecommerce-playground.lambdatest.io/index.php?route=common/home",
+    "lamdaApp_Title": "Your Store",
+    "email_Id": "ppushpanayagam@gmail.com",
+    "password": "MyDream@2024",
+    "account_Header": "My Account",
+    "accountPageUrl": "route=account/account"
+}

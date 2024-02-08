@@ -1,5 +1,7 @@
-import {BeforeAll, Before, AfterAll, After} from "@cucumber/cucumber";
+import {BeforeAll, Before, AfterAll, After, setDefaultTimeout} from "@cucumber/cucumber";
 const {chromium} = require("playwright");
+
+setDefaultTimeout(50000);
 
 BeforeAll(async() => {
     global.browser = await chromium.launch({

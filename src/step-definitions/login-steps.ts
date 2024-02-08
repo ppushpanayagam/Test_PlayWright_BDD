@@ -1,15 +1,13 @@
 import { Given, Then, When } from '@cucumber/cucumber'
 import {expect} from'@playwright/test'
+import * as data from '../../config/testdata.json'
 
 
 Given(
     /^the user launch the applicaiton$/,
     async function() {
 
-        console.log("I am on the home page");
-
-        await global.page.goto("https://ecommerce-playground.lambdatest.io/index.php?route=common/home")
-
+        await global.page.goto(data.baseUrl)
     }
 )
 
@@ -17,7 +15,7 @@ Given(
     /^the user on the login page$/,
     async function() {
 
-        expect(await global.page.title()).toBe("Your Store");
+        expect(await global.page.title()).toBe(data.lamdaApp_Title);
     }
 )
 
@@ -26,8 +24,8 @@ When(
     async function() {
 
         await global.page.locator('li.dropdown:nth-child(6) > a').click();
-        await global.page.locator('#input-email').fill('ppushpanayagam@gmail.com');
-        await global.page.locator('#input-password').fill('MyDream@2024');   
+        await global.page.locator('#input-email').fill(data.email_Id);
+        await global.page.locator('#input-password').fill(data.password);   
     }
 )
 
@@ -44,7 +42,7 @@ Then(
     async function() {
 
         const actual = await global.page.locator('#content>div:nth-child(1)>h2').textContent();
-        expect(actual).toBe("My Account");
+        expect(actual).toBe(data.account_Header);
     }
 )
 
@@ -52,6 +50,6 @@ Then(
     /^the user should see all the required account details$/,
     async function() {
 
-        expect(await global.page.url()).toContain("route=account/account");
+        expect(await global.page.url()).toContain(data.accountPageUrl);
     }
 )
